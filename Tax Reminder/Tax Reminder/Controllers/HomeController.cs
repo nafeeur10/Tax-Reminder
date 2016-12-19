@@ -10,11 +10,11 @@ namespace Tax_Reminder.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+             return View();
         }
 
         public ActionResult About()     
-        {
+        {      
             ViewBag.Message = "Your application description page.";
 
             return View();
