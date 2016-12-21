@@ -13,7 +13,7 @@ namespace Tax_Reminder.Controllers
              return View();
         }
 
-        public ActionResult About()     
+        public ActionResult TaxInformation()     
         {      
             ViewBag.Message = "Your application description page.";
 
