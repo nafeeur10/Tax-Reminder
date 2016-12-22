@@ -22,17 +22,26 @@
         </div>
         
         
+        
         <div class="col-lg-12 col-md-12">
-            <h4>How It Works</h4>
-            <ul>YOU:</ul>
-            <li>Tell us your vehicle make and registration</li>
-            <li>Pay just £1.99 & sit back whilst we do the rest</li>
+            <h4><strong>How It Works</strong></h4>
+            <h5><strong>YOU:</strong></h5>
+            <p>1. Tell us your vehicle make and registration</p>
+            <p>2. Pay just £1.99 & sit back whilst we do the rest</p>
             
-            <ul>WE:</ul>
-            <li>We check your Road Tax & MOT due dates for you</li>
-            <li>We set-up your renewal reminders to notify you by email 28-days, 7-days & 1-day before your Tax & MOT due dates</li>
-            <li>Plus, we email you a printable reminder disc you to display on your vehicle windscreen</li>
+            <br />
 
+            <h5><strong>WE:</strong></h5>
+            <p>1. We check your Road Tax & MOT due dates for you</p>
+            <p>2. We set-up your renewal reminders to notify you by email 28-days, 7-days & 1-day before your Tax & MOT due dates</p>
+            <p>3. Plus, we email you a printable reminder disc you to display on your vehicle windscreen</p>
+
+        </div>
+        
+        <div class="col-md-12 col-lg-12">
+            @Html.ActionLink("Remind Me Now", "TaxInformation",
+            new { controller = "Home", id = 1 },
+            new { @class = "btn btn-success" })
         </div>
     </div>
     
@@ -42,28 +51,8 @@
     
 </div>
 
-<div class="row">
-    
-</div>
+
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    
 </div>
