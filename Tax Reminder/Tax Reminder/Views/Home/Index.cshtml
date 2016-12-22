@@ -39,7 +39,9 @@
         </div>
         
         <div class="col-md-12 col-lg-12">
-            @Html.ActionLink("Remind Me Now", "TaxInformation", "Home")
+            @Html.ActionLink("Remind Me Now", "TaxInformation",
+            new { controller = "Home", id = 1 },
+            new { @class = "btn btn-success" })
         </div>
     </div>
     
