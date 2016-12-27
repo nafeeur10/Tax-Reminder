@@ -1,23 +1,22 @@
 ﻿@model Tax_Reminder.Models.TaxInformationModel
 
 @{
-    ViewBag.Title = "TaxInformation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>TaxInformation</h2>
+<h2>Tax Information</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>TaxInformationModel</h4>
+    <div class="form-horizontal col-md-8 col-lg-8 col-sm-12 col-xs-12">
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.VehicleRegistration, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.VehicleRegistration, "Vehicle Registration", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.VehicleRegistration, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.VehicleRegistration, "", new { @class = "text-danger" })
@@ -25,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.VehicleMake, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.VehicleMake, "Vehicle Make", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.VehicleMake, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.VehicleMake, "", new { @class = "text-danger" })
@@ -41,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ReferralCode, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ReferralCode, "Referral Code", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ReferralCode, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ReferralCode, "", new { @class = "text-danger" })
@@ -49,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CardNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CardNumber, "Card Number", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CardNumber, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CardNumber, "", new { @class = "text-danger" })
@@ -57,7 +56,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CvcSecurityCode, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CvcSecurityCode, "CVC (Security code)", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CvcSecurityCode, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CvcSecurityCode, "", new { @class = "text-danger" })
@@ -71,18 +70,35 @@
                 @Html.ValidationMessageFor(model => model.Expiry, "", new { @class = "text-danger" })
             </div>
         </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsAgree, "I agree to the terms and conditions", htmlAttributes: new {@class="control-label"})
+            <div class="col-md-10">
+                @Html.CheckBoxFor(m => m.IsAgree, new { @checked = true });
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Order Now" class="btn btn-default" />
             </div>
         </div>
+        
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+
+
+
+
+    <div class="form-horizontal col-md-4 col-lg-4 col-sm-12 col-xs-12">
+        <h3>Your Tax Disk Design</h3>
+        <img src="@Url.Content("~/Content/img/disc-front-main.png")" alt="Tax Disc Front End Design" class="img-responsive" />
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

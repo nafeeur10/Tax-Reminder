@@ -12,5 +12,6 @@ namespace Tax_Reminder.Models
         public int CardNumber { get; set; }
         public string CvcSecurityCode { get; set; }
         public DateTime Expiry { get; set; }
+        public bool IsAgree { get; set; }
     }
 }
