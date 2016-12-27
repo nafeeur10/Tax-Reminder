@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201612221232270_CreateContactUsModel.Designer.cs">
       <DependentUpon>201612221232270_CreateContactUsModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612262026434_AddFieldToTaxInformationModel.cs" />
+    <Compile Include="Migrations\201612262026434_AddFieldToTaxInformationModel.Designer.cs">
+      <DependentUpon>201612262026434_AddFieldToTaxInformationModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -226,6 +230,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\disc-front-main.png" />
     <Content Include="Content\img\Untaxed_Car.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -303,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612221232270_CreateContactUsModel.resx">
       <DependentUpon>201612221232270_CreateContactUsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612262026434_AddFieldToTaxInformationModel.resx">
+      <DependentUpon>201612262026434_AddFieldToTaxInformationModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
