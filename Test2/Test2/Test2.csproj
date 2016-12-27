@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E846BFEB-2E44-4853-A9BB-08D64F68D6E2}</ProjectGuid>
+    <ProjectGuid>{D8D92CF9-C33D-4339-A81C-5896FE0ED6C8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tax_Reminder</RootNamespace>
-    <AssemblyName>Tax Reminder</AssemblyName>
+    <RootNamespace>Test2</RootNamespace>
+    <AssemblyName>Test2</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -201,37 +201,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612210125083_InitialCreate.cs" />
-    <Compile Include="Migrations\201612210125083_InitialCreate.Designer.cs">
-      <DependentUpon>201612210125083_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612212017527_CreateTaxInformaton.cs" />
-    <Compile Include="Migrations\201612212017527_CreateTaxInformaton.Designer.cs">
-      <DependentUpon>201612212017527_CreateTaxInformaton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612221232270_CreateContactUsModel.cs" />
-    <Compile Include="Migrations\201612221232270_CreateContactUsModel.Designer.cs">
-      <DependentUpon>201612221232270_CreateContactUsModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612262026434_AddFieldToTaxInformationModel.cs" />
-    <Compile Include="Migrations\201612262026434_AddFieldToTaxInformationModel.Designer.cs">
-      <DependentUpon>201612262026434_AddFieldToTaxInformationModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\ContactUsModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\TaxInformationModel.cs" />
+    <Compile Include="Models\Sample.cs" />
+    <Compile Include="Models\SamplesController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\img\disc-front-main.png" />
-    <Content Include="Content\img\Untaxed_Car.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -264,6 +244,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -285,9 +267,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\TaxInformation.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\ThankYou.cshtml" />
+    <Content Include="Views\Samples\Create.cshtml" />
+    <Content Include="Views\Samples\Delete.cshtml" />
+    <Content Include="Views\Samples\Details.cshtml" />
+    <Content Include="Views\Samples\Edit.cshtml" />
+    <Content Include="Views\Samples\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,20 +283,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612210125083_InitialCreate.resx">
-      <DependentUpon>201612210125083_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612212017527_CreateTaxInformaton.resx">
-      <DependentUpon>201612212017527_CreateTaxInformaton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612221232270_CreateContactUsModel.resx">
-      <DependentUpon>201612221232270_CreateContactUsModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612262026434_AddFieldToTaxInformationModel.resx">
-      <DependentUpon>201612262026434_AddFieldToTaxInformationModel.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -330,9 +300,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50876</DevelopmentServerPort>
+          <DevelopmentServerPort>58147</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50876/</IISUrl>
+          <IISUrl>http://localhost:58147/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
