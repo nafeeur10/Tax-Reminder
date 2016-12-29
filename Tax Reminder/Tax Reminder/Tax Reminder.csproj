@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -288,6 +289,11 @@
     <Content Include="Views\Home\TaxInformation.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\ThankYou.cshtml" />
+    <Content Include="Views\AdminPanel\Create.cshtml" />
+    <Content Include="Views\AdminPanel\Delete.cshtml" />
+    <Content Include="Views\AdminPanel\Details.cshtml" />
+    <Content Include="Views\AdminPanel\Edit.cshtml" />
+    <Content Include="Views\AdminPanel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
