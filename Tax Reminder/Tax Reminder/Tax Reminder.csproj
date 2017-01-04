@@ -227,17 +227,29 @@
     <Compile Include="Migrations\201701030454247_AddNameToApplicationUser.Designer.cs">
       <DependentUpon>201701030454247_AddNameToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701040547578_AddNameInViewModel.cs" />
+    <Compile Include="Migrations\201701040547578_AddNameInViewModel.Designer.cs">
+      <DependentUpon>201701040547578_AddNameInViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701040913127_AddDiscDesignModel.cs" />
+    <Compile Include="Migrations\201701040913127_AddDiscDesignModel.Designer.cs">
+      <DependentUpon>201701040913127_AddDiscDesignModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ContactUsModel.cs" />
+    <Compile Include="Models\DiscDesignModel.cs" />
+    <Compile Include="Models\DiscDesignViewModel.cs" />
+    <Compile Include="Models\ExternalLoginListViewModel.cs" />
     <Compile Include="Models\ForgotPasswordViewModel.cs" />
     <Compile Include="Models\ForgotViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\SendCodeViewModel.cs" />
     <Compile Include="Models\TaxInformationModel.cs" />
     <Compile Include="Models\VerifyCodeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -305,6 +317,7 @@
     <Content Include="Views\Home\TaxInformation.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\ThankYou.cshtml" />
+    <Content Include="Views\Home\DiscDesign.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -337,6 +350,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701030454247_AddNameToApplicationUser.resx">
       <DependentUpon>201701030454247_AddNameToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701040547578_AddNameInViewModel.resx">
+      <DependentUpon>201701040547578_AddNameInViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701040913127_AddDiscDesignModel.resx">
+      <DependentUpon>201701040913127_AddDiscDesignModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
