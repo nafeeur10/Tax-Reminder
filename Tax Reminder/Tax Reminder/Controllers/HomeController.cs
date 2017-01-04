@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Linq;
+using System.Web.Mvc;
 using Tax_Reminder.Models;
 
 namespace Tax_Reminder.Controllers
@@ -52,6 +54,22 @@ namespace Tax_Reminder.Controllers
         public ActionResult ThankYou()
         {
             return View();
+        }
+
+        [Authorize]
+        public ActionResult DiscDesign(DiscDesignViewModel discDesignView)
+        {
+            var discDesign = new DiscDesignModel()
+            {
+                VehicleName = db.Users.Single(u => u.Id == discDesignView.VehicleName),
+                TaxDateTime = DateTime.Parse(string.Format("{0} {1} {2} ", discDesignView.TaxDay, discDesignView.TaxMonth, discDesignView.TaxYear)),
+                MotDateTime = DateTime.Parse(string.Format("{0} {1} {2} ", discDesignView.MotDay, discDesignView.MotMonth, discDesignView.MotYear))
+            };
+
+            db.DiscDesignModels.Add(discDesign);
+            db.SaveChanges();
+
+            return RedirectToAction("ThankYou", "Home");
         }
     }
 }

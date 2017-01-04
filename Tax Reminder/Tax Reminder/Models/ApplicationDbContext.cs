@@ -7,6 +7,7 @@ namespace Tax_Reminder.Models
     {
         public DbSet<TaxInformationModel> TaxInformationModels { get; set; }
         public DbSet<ContactUsModel> ContactUsModels{ get; set;}
+        public DbSet<DiscDesignModel> DiscDesignModels { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
